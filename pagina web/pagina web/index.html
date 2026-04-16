@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Equipamiento Deportivo — Página Principal</title>
+    <style>
+        :root{
+            --accent:#0b6;
+            --muted:#666;
+            --card-bg:#fff;
+            --bg:#f5f7fa;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        html,body{height:100%}
+        body{
+            margin:0;
+            background:var(--bg);
+            color:#222;
+            line-height:1.4;
+            -webkit-font-smoothing:antialiased;
+        }
+        header{
+            background:#063;
+            color:#fff;
+            padding:1rem;
+        }
+        .container{max-width:1100px;margin:0 auto;padding:0 1rem;}
+        .top{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:1rem;
+        }
+        .brand{display:flex;align-items:center;gap:.75rem}
+        .brand img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+        nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.5rem;flex-wrap:wrap}
+        nav a{color:#dff; text-decoration:none; padding:.35rem .6rem; border-radius:.35rem;}
+        nav a:hover{background:rgba(255,255,255,0.06)}
+        main{padding:2rem 0}
+        #hero{
+            background:linear-gradient(90deg, rgba(6,51,36,0.95), rgba(11,102,85,0.95));
+            color:white;
+            padding:2rem;
+            border-radius:12px;
+            margin-bottom:1.25rem;
+        }
+        #productos .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+        .card{
+            background:var(--card-bg);
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 4px 12px rgba(10,10,10,0.06);
+            display:flex;
+            flex-direction:column;
+        }
+        .card img{width:100%;height:180px;object-fit:cover;display:block}
+        .card .body{padding:1rem;flex:1;display:flex;flex-direction:column;gap:.5rem}
+        .price{color:var(--accent);font-weight:700}
+        .types{margin:0;padding-left:1rem;color:var(--muted)}
+        .actions{display:flex;gap:.5rem;align-items:center;margin-top:auto}
+        .btn{
+            background:var(--accent);
+            color:#042;
+            border:none;padding:.5rem .75rem;border-radius:.4rem;cursor:pointer;
+        }
+        footer{padding:1rem 0;color:var(--muted);font-size:.9rem}
+        address{font-style:normal}
+        .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+        @media(max-width:780px){ .contact-grid{grid-template-columns:1fr} }
+        small{color:var(--muted)}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container top" role="banner">
+            <div class="brand">
+                <img src="https://picsum.photos/seed/logo/200/200" alt="Logotipo de Deportes Atlas" />
+                <div>
+                    <h1 style="margin:.15rem 0 0;font-size:1.25rem">Deportes Atlas</h1>
+                    <small style="color:rgba(255,255,255,.85)">Equipamiento profesional y amateur</small>
+                </div>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#empresa">Historia</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="main-content">
+        <section id="hero" aria-labelledby="hero-title">
+            <h2 id="hero-title" style="margin:0 0.25rem 0.5rem">Tu equipo, tu mejor rendimiento</h2>
+            <p style="margin:0 0.25rem .25rem;max-width:60ch">
+                Fabricamos y distribuimos equipamiento deportivo de alta calidad: balones, raquetas, protecciones y accesorios.
+                Productos diseñados para durar, con materiales certificados y pruebas de rendimiento.
+            </p>
+        </section>
+
+        <section id="productos" aria-labelledby="productos-title">
+            <h2 id="productos-title">Productos destacados</h2>
+            <p style="color:var(--muted);margin-top:.25rem">Precios indicativos. Disponibilidad y tallas varían según stock.</p>
+
+            <div class="grid" style="margin-top:1rem">
+                <article class="card" aria-labelledby="p1-title">
+                    <img src="https://picsum.photos/seed/ball/800/480" alt="Balón de fútbol Pro color blanco y negro" />
+                    <div class="body">
+                        <h3 id="p1-title" style="margin:0">Balón Fútbol Pro</h3>
+                        <p class="price">49,90 €</p>
+                        <p style="margin:.25rem 0">Balón de competición con cámara butílica, cosido a máquina para mayor durabilidad y vuelo estable.</p>
+                        <ul class="types">
+                            <li>Tamaños: 3, 4, 5</li>
+                            <li>Tipos: entrenamiento, competición</li>
+                        </ul>
+                        <div class="actions">
+                            <button class="btn" aria-label="Agregar Balón Fútbol Pro al carrito">Comprar</button>
+                            <small style="margin-left:auto;color:var(--muted)">Envío 24-48h</small>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" aria-labelledby="p2-title">
+                    <img src="https://picsum.photos/seed/racket/800/480" alt="Raqueta de tenis carbono con fondo neutro" />
+                    <div class="body">
+                        <h3 id="p2-title" style="margin:0">Raqueta CarbonX 300</h3>
+                        <p class="price">129,00 €</p>
+                        <p style="margin:.25rem 0">Raqueta ligera de carbono, balance equilibrado para control y potencia. Encordado premium opcional.</p>
+                        <ul class="types">
+                            <li>Pesos: 280g, 300g</li>
+                            <li>Niveles: amateur, avanzado</li>
+                        </ul>
+                        <div class="actions">
+                            <button class="btn" aria-label="Comprar Raqueta CarbonX 300">Comprar</button>
+                            <small style="margin-left:auto;color:var(--muted)">Garantía 2 años</small>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" aria-labelledby="p3-title">
+                    <img src="https://picsum.photos/seed/guard/800/480" alt="Protectores deportivos para artes marciales" />
+                    <div class="body">
+                        <h3 id="p3-title" style="margin:0">Protectores Titan</h3>
+                        <p class="price">39,50 €</p>
+                        <p style="margin:.25rem 0">Juego de protectores con espuma de alta absorción y revestimiento resistente al sudor.</p>
+                        <ul class="types">
+                            <li>Tipos: espinilleras, peto, cascos</li>
+                            <li>Tallas: S, M, L</li>
+                        </ul>
+                        <div class="actions">
+                            <button class="btn" aria-label="Comprar Protectores Titan">Comprar</button>
+                            <small style="margin-left:auto;color:var(--muted)">Ajuste reforzado</small>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="empresa" aria-labelledby="empresa-title" style="margin-top:2rem">
+            <h2 id="empresa-title">Nuestra historia</h2>
+            <p style="color:var(--muted);max-width:70ch">
+                Deportes Atlas nació en 1998 como un pequeño taller de reparación de material deportivo. Con los años se transformó en fabricante y distribuidor,
+                centrado en innovación de materiales y en relaciones cercanas con clubes y deportistas. Nuestro compromiso: calidad, seguridad y servicio local.
+            </p>
+            <p style="max-width:70ch;margin-top:.5rem">Trabajamos con proveedores certificados y realizamos controles de calidad periódicos en cada lote de producción.</p>
+        </section>
+
+        <section id="contacto" aria-labelledby="contacto-title" style="margin-top:2rem">
+            <h2 id="contacto-title">Contacto e información</h2>
+            <div class="contact-grid" style="margin-top: .75rem">
+                <div>
+                    <h3 style="margin:.25rem 0">Visítanos</h3>
+                    <address>
+                        Deportes Atlas S.L.<br>
+                        Calle Deportivo 45, Polígono Norte<br>
+                        28080 Madrid, España
+                    </address>
+
+                    <h4 style="margin:.6rem 0 .25rem">Teléfono</h4>
+                    <p><a href="tel:+34123456789">+34 912 345 678</a></p>
+
+                    <h4 style="margin:.4rem 0 .25rem">Correo</h4>
+                    <p><a href="mailto:info@deportesatlas.example">info@deportesatlas.example</a></p>
+
+                    <h4 style="margin:.4rem 0 .25rem">Horario</h4>
+                    <p class="hours" style="color:var(--muted)">Lunes-Viernes: 9:00 – 18:00 • Sáb: 10:00 – 14:00</p>
+                </div>
+
+                <aside aria-label="Formulario de contacto">
+                    <form action="#" method="post" onsubmit="alert('Formulario enviado (ejemplo)'); return false;" style="display:flex;flex-direction:column;gap:.5rem;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.04)">
+                        <label>
+                            <span style="font-size:.9rem">Nombre</span>
+                            <input required name="nombre" type="text" placeholder="Tu nombre" style="width:100%;padding:.5rem;border-radius:.35rem;border:1px solid #ddd" />
+                        </label>
+                        <label>
+                            <span style="font-size:.9rem">Correo</span>
+                            <input required name="email" type="email" placeholder="tu@correo.com" style="width:100%;padding:.5rem;border-radius:.35rem;border:1px solid #ddd" />
+                        </label>
+                        <label>
+                            <span style="font-size:.9rem">Mensaje</span>
+                            <textarea required name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" style="width:100%;padding:.5rem;border-radius:.35rem;border:1px solid #ddd"></textarea>
+                        </label>
+                        <div style="display:flex;gap:.5rem;justify-content:flex-end">
+                            <button type="submit" class="btn">Enviar</button>
+                            <button type="reset" style="padding:.5rem .75rem;border-radius:.35rem;border:1px solid #ddd;background:#fff;cursor:pointer">Limpiar</button>
+                        </div>
+                    </form>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container" role="contentinfo">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+            <small>© 1998–2026 Deportes Atlas S.L. — Todos los derechos reservados</small>
+            <nav aria-label="Enlaces de pie de página">
+                <a href="#" style="color:var(--muted);text-decoration:none;margin-left:.5rem">Aviso legal</a>
+                <a href="#" style="color:var(--muted);text-decoration:none;margin-left:.5rem">Política de privacidad</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html></footer></aside></div></article></div></nav>
